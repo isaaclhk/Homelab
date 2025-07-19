@@ -24,6 +24,8 @@ Kubernetes (often abbreviated as **K8s**) is an open-source platform designed to
 A Kubernetes cluster consists of two main components:
 
 ### 1. **Control Plane (Master Components)**
+![alt text](images/kubernetes-cluster-architecture.svg)
+**Figure 1.** Architecture of a Kubernetes cluster
 
 Responsible for managing the overall state and operations of the cluster.
 
@@ -54,7 +56,7 @@ https://rancherdesktop.io
 ### configuration 
 **For mac users:** \
 .zshrc is the configuration file that sets up your shell environment.\
-From this file, you can configure shortcuts for kubernetes commands for convenience..
+From this file, you can configure shortcuts for kubernetes commands for convenience.
 ```bash
 vim ~./zshrc
 ```
