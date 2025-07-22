@@ -20,12 +20,12 @@ Kubernetes (often abbreviated as **K8s**) is an open-source platform designed to
 - **Portability**: Supports deployment across diverse environments
 
 ## Cluster Architecture
+![alt text](images/kubernetes-cluster-architecture.svg)
+**Figure 1.** Architecture of a Kubernetes cluster
 
 A Kubernetes cluster consists of two main components:
 
 ### 1. **Control Plane (Master Components)**
-![alt text](images/kubernetes-cluster-architecture.svg)
-**Figure 1.** Architecture of a Kubernetes cluster
 
 Responsible for managing the overall state and operations of the cluster.
 
