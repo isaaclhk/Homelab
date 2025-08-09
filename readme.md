@@ -1,5 +1,10 @@
 # Isaac's Home Lab
 
+## Prerequisites
+- kubectl
+- helm
+
+
 Clone the repository:
 ```
 git clone https://github.com/isaaclhk/Kubernetes.git
