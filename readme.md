@@ -70,3 +70,5 @@ prometheus-stack prometheus-community/kube-prometheus-stack
 # apply the load balancer configuration
 kubectl apply -f loadbalancer.yaml
 ```
+
+Import the dashboard by uploading the `dashboard.json`.
