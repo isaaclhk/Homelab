@@ -3,12 +3,60 @@
 ## Prerequisites
 - kubectl
 - helm
-
+- K3s
 
 Clone the repository:
 ```
 git clone https://github.com/isaaclhk/Kubernetes.git
 ```
+
+### K3s Setup
+
+#### SSH
+On the target machine:
+```bash
+# installation
+sudo apt update
+sudo apt install openssh-server
+
+# enable
+sudo systemctl enable ssh
+sudo systemctl start ssh
+```
+
+On your remote machine:
+```bash
+# ssh
+ssh username@<ip address>
+```
+
+#### K3s
+Install K3s on the target machine:
+```bash
+curl -sfL https://get.k3s.io | sh -
+```
+
+On the remote machine:
+```bash
+# Create kube directory if it doesn’t exist
+mkdir -p ~/.kube
+
+# Copy k3s.yaml from target machine to your local ~/.kube/config
+# Replace <user> and <target-ip> with your values
+scp <user>@<target-ip>:/etc/rancher/k3s/k3s.yaml ~/.kube/config
+
+# Fix ownership and permissions
+chown "$USER":"$USER" ~/.kube/config
+chmod 600 ~/.kube/config
+```
+
+In `~/.kube/config`, update::
+```vim
+clusters:
+- cluster:
+    server: https://<target-ip>:6443
+```
+
 
 ## Homarr
 ```bash
