@@ -1,0 +1,10 @@
+replicaCount: 1
+persistence:
+  homarrDatabase:
+    enabled: true
+    name: homarr-data
+    storageClassName: local-path
+    accessMode: ReadWriteOnce
+    size: 500Mi
+    mountPath: /app/data
+    volumeClaimName: homarr-data
