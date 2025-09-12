@@ -34,29 +34,21 @@ ssh username@<ip address>
 Install K3s on the target machine:
 ```bash
 curl -sfL https://get.k3s.io | sh -
+
+sudo cp /etc/rancher/k3s/k3s.yaml .
+
+exit
 ```
 
 On the remote machine:
 ```bash
-# Create kube directory if it doesn’t exist
-mkdir -p ~/.kube
-
-# Copy k3s.yaml from target machine to your local ~/.kube/config
 # Replace <user> and <target-ip> with your values
-scp <user>@<target-ip>:/etc/rancher/k3s/k3s.yaml ~/.kube/config
+scp <user>@<target-ip>:/home/user/k3s.yaml .
 
-# Fix ownership and permissions
-chown "$USER":"$USER" ~/.kube/config
-chmod 600 ~/.kube/config
+mkdir -p ~/.kube
+vim k3s.yaml # edit the IP
+mv k3s.yaml .kube/config
 ```
-
-In `~/.kube/config`, update::
-```vim
-clusters:
-- cluster:
-    server: https://<target-ip>:6443
-```
-
 
 ## Homarr
 ```bash
