@@ -4,7 +4,6 @@ metadata:
   name: linkding-data-pvc
   namespace: linkding
 spec:
-  apiVersion: v1
   accessModes:
     - ReadWriteOnce
   volumeMode: Filesystem
