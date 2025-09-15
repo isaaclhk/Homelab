@@ -15,7 +15,7 @@ spec:
         app: linkding
     spec:
       containers:
-      - image: sissbruecker/linkding
+        - image: sissbruecker/linkding:latest
         name: linkding
         volumeMounts:
           - mountPath: /app/data
