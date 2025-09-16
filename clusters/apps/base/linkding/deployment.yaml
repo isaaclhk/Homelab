@@ -5,6 +5,10 @@ metadata:
     app: linkding
   name: linkding
 spec:
+  securityContext:
+    runAsUser: 33
+    runAsGroup: 33
+    fsGroup: 33
   replicas: 1
   selector:
     matchLabels:
@@ -22,6 +26,8 @@ spec:
               name: linkding-volume
           ports:
             - containerPort: 9090
+          securityContext:
+            allowPrivilegeEscalation: false
       volumes:
         - name: linkding-volume
           persistentVolumeClaim:
