@@ -1,0 +1,10 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  data:
+    token: ZXlKaElqb2lNRGsxWm1Wa05HUmpZekF5T1dRNVpXVTRPRGd3TkRZek1UZGhZelV6Tm1NaUxDSjBJam9pTWpjM056STVNekF0T0RWaU1pMDBOak13TFRneU9XWXROMkZoWmpOalpXRTJOR1F4SWl3aWN5STZJazVxVVhwYVIwVXdXbFJWZEU1cVJYZGFVekF3V1ZkVk1reFVhM2RaYWtGMFdXcFZlRTFYV1hkWmFrWnFUVVJPYUNKOQ==
+  kind: Secret
+  metadata:
+    name: tunnel-token
+    namespace: linkding
+  type: Opaque
