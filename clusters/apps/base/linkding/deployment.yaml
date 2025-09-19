@@ -28,6 +28,8 @@ spec:
             - containerPort: 9090
           securityContext:
             allowPrivilegeEscalation: false
+            capabilities:
+              drop: ["ALL"]
       volumes:
         - name: linkding-volume
           persistentVolumeClaim:
