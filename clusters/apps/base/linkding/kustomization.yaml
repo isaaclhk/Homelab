@@ -5,3 +5,5 @@ resources:
   - namespace.yaml
   - storage.yaml
   - service.yaml
+  - tunnel-token.yaml
+  - tunnel.yaml
