@@ -90,86 +90,6 @@ kube/
     └── monitoring/
         └── kustomization.yaml
 ```
-## Apps
-### [Linkding](https://github.com/sissbruecker/linkding)
-A simple, self-hosted bookmark manager. 
-#### Key Features
-- Save and organize bookmarks with tags  
-- Full-text search across saved bookmarks  
-- Minimal and fast web interface  
-- Import and export bookmarks (Netscape HTML format)  
-- REST API for integrations and automation  
-- Designed to be lightweight and easy to self-host (Docker support included) 
-
-
-### Homarr
-```bash
-# navigate to homarr directory
-cd homarr
-
-# add the Helm chart repository and update it
-helm repo add homarr-labs https://homarr-labs.github.io/charts/
-helm repo update
-
-# create a namespace for homarr
-kubectl create namespace homarr 
-
-# install Homarr in the homarr namespace
-helm install homarr homarr-labs/homarr -n homarr
-
-# apply persistent volume configuration
-kubectl apply -f storage.yaml
-
-# apply load balancer configuration
-kubectl apply -f loadbalancer.yaml
-
-# upgrade Homarr with the custom values file
-helm upgrade -f values.yaml \
-homarr homarr-labs/homarr \
--n homarr
-```
-
-### Mealie
-```bash
-# navigate to the mealie directory
-cd mealie
-
-# apply all configuration files
-kubectl apply -f namespace.yaml # create namespace
-kubectl apply -f storage.yaml # persistent volume
-kubectl apply -f deployment.yaml # deploy
-kubectl apply -f service.yaml # service config
-```
-
-### Grafana-Prometheus Monitoring Stack
-```bash
-# navigate to monitoring directory
-cd monitoring
-
-# add the Helm chart repository and update it
-helm repo add prometheus-community \
-https://prometheus-community.github.io/helm-charts
-helm repo update
-
-# create a namespace for the monitoring stack
-kubectl create namespace monitoring
-
-# install
-helm install prometheus-stack \
-prometheus-community/kube-prometheus-stack \
--n monitoring
-
-# upgrade with the custom values file
-helm upgrade \
--f values.yaml \
-prometheus-stack prometheus-community/kube-prometheus-stack
-
-# apply the load balancer configuration
-kubectl apply -f loadbalancer.yaml
-```
-
-Import the dashboard by uploading the `dashboard.json`.
-
 ## Exposing Apps to the Internet via Cloudflare
 
 ### Overview
@@ -217,3 +137,81 @@ Read the [docs](https://fluxcd.io/flux/guides/mozilla-sops/) for more details. I
 Note: 
 1. The `.sops.yaml` is usually placed at the root directory for consistency. Add specific `.sops.yaml` files in subdirectories only if those apps need different encryption keys or rules.
 2. ⚠️ Remember to encrypt the secret files before pushing to repository.
+
+## Apps
+### [Linkding](https://github.com/sissbruecker/linkding)
+A simple, self-hosted bookmark manager. 
+#### Key Features
+- Save and organize bookmarks with tags  
+- Full-text search across saved bookmarks  
+- Minimal and fast web interface  
+- Import and export bookmarks (Netscape HTML format)  
+- REST API for integrations and automation  
+- Designed to be lightweight and easy to self-host (Docker support included) 
+
+### [Mealie](https://mealie.io/)
+
+Mealie is an open-source, self-hosted recipe manager and meal planner.  
+It lets you save recipes, plan meals, and generate shopping lists - all in one place.  
+
+- Import or create recipes  
+- Plan meals for the week  
+- Auto-generate grocery lists  
+- Multi-user and smart home integrations  
+
+### Homarr
+```bash
+# navigate to homarr directory
+cd homarr
+
+# add the Helm chart repository and update it
+helm repo add homarr-labs https://homarr-labs.github.io/charts/
+helm repo update
+
+# create a namespace for homarr
+kubectl create namespace homarr 
+
+# install Homarr in the homarr namespace
+helm install homarr homarr-labs/homarr -n homarr
+
+# apply persistent volume configuration
+kubectl apply -f storage.yaml
+
+# apply load balancer configuration
+kubectl apply -f loadbalancer.yaml
+
+# upgrade Homarr with the custom values file
+helm upgrade -f values.yaml \
+homarr homarr-labs/homarr \
+-n homarr
+```
+
+
+### Grafana-Prometheus Monitoring Stack
+```bash
+# navigate to monitoring directory
+cd monitoring
+
+# add the Helm chart repository and update it
+helm repo add prometheus-community \
+https://prometheus-community.github.io/helm-charts
+helm repo update
+
+# create a namespace for the monitoring stack
+kubectl create namespace monitoring
+
+# install
+helm install prometheus-stack \
+prometheus-community/kube-prometheus-stack \
+-n monitoring
+
+# upgrade with the custom values file
+helm upgrade \
+-f values.yaml \
+prometheus-stack prometheus-community/kube-prometheus-stack
+
+# apply the load balancer configuration
+kubectl apply -f loadbalancer.yaml
+```
+
+Import the dashboard by uploading the `dashboard.json`.
