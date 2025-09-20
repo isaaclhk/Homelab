@@ -1,8 +1,23 @@
 apiVersion: v1
 data:
-  token: ZXlKaElqb2lNRGsxWm1Wa05HUmpZekF5T1dRNVpXVTRPRGd3TkRZek1UZGhZelV6Tm1NaUxDSjBJam9pTWpjM056STVNekF0T0RWaU1pMDBOak13TFRneU9XWXROMkZoWmpOalpXRTJOR1F4SWl3aWN5STZJazVxVVhwYVIwVXdXbFJWZEU1cVJYZGFVekF3V1ZkVk1reFVhM2RaYWtGMFdXcFZlRTFYV1hkWmFrWnFUVVJPYUNKOQ==
+    token: ENC[AES256_GCM,data:ozHGZPGpzTGwh9Naf7h9GUHAmT/MLTlKtFtXZn//NOwKkztjrNEtcoMVZk5BC2k0KXjCAZ984xnUYHw5BHcS8k2g/JE/CHfo+hdts3Nf59AtUGi7YxlUafAKtEJ2B1FVy6PBMqZfH5C6/p3+Z7XsnDFDqVPEmUU8zGPxDYWwpmsc8JiqQKOgKpLltmuBPJr9ohdHALLM24djQddGdtvRrFhp37qwFTcRW6wAyfgJUUmuH7LZJPz6JEJsos1qU9wOOW0cK0EacIz3QDGjqLFQ3fjRtM2a6QMwNrPvdn+2LV8oY5RZYUKIF0MZ85DwguuKkT7qYdZuGec=,iv:jWeA4kDtNX5DwgHgHor/QbxppLFdPYtq2a+knuhU4nY=,tag:YDkU0z6RP/EQcZMvnoQIMQ==,type:str]
 kind: Secret
 metadata:
-  name: tunnel-token
-  namespace: linkding
+    name: tunnel-token
+    namespace: linkding
 type: Opaque
+sops:
+    age:
+        - recipient: age1dknxwrzsnv2aq7lar4jznk89wrv7hfcjc0cmj9tf5kkcsqwptgeq3zw0lu
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBycFl5UnlqaGVZaTVPUUpp
+            MGVsemdmbjZuaUwrT05qcWY5UlZCdERyS1V3CjlTZlFUMU4wTkFCcUJkSUJyT1NE
+            bi9JVjRYZTN3RkVjNUdlMTZuSDFiRGsKLS0tIDhlbUlxYlVZMy9XRVoyVjNHQUQr
+            WGRidUFLTW83V29MS1k4VU56WHdGNm8KOvL2AFDYmpv48J2iWmU1tuznmI1YLo4Z
+            hZQst6zRb7w37mNtVH4g7WXai0aCEs1kK+8auyhYvlzjzbx0NCH2qA==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2025-09-20T06:15:27Z"
+    mac: ENC[AES256_GCM,data:ZDkJPS6K0MXLFTU4v86SELx+ZN6c7MevRI2olNJXafV70yFhkikfOLmAGHINAr4G00qFRSN/vuy3Y5OcqKp/IAezqcsb9mhz+BNvuZ8m0h3/pL9lt+aQKeQvnUXlNL6bg/3pQt74ZQPqJXDrpVrMNgA15GKVxESsWHIFA6GC4hI=,iv:55dlGTgoDqReN/wCYzWRl5VAiZVhoh7YXZOgjQa0U0I=,tag:GCB/QKIPhxU99P/S4Ybruw==,type:str]
+    encrypted_regex: ^(data|stringData)$
+    version: 3.10.2
