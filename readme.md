@@ -89,8 +89,19 @@ kube/
     └── monitoring/
         └── kustomization.yaml
 ```
+## Apps
+### [Linkding](https://github.com/sissbruecker/linkding)
+A simple, self-hosted bookmark manager. 
+#### Key Features
+- Save and organize bookmarks with tags  
+- Full-text search across saved bookmarks  
+- Minimal and fast web interface  
+- Import and export bookmarks (Netscape HTML format)  
+- REST API for integrations and automation  
+- Designed to be lightweight and easy to self-host (Docker support included) 
 
-## Homarr
+
+### Homarr
 ```bash
 # navigate to homarr directory
 cd homarr
@@ -117,7 +128,7 @@ homarr homarr-labs/homarr \
 -n homarr
 ```
 
-## Mealie
+### Mealie
 ```bash
 # navigate to the mealie directory
 cd mealie
@@ -129,7 +140,7 @@ kubectl apply -f deployment.yaml # deploy
 kubectl apply -f service.yaml # service config
 ```
 
-## Grafana-Prometheus Monitoring Stack
+### Grafana-Prometheus Monitoring Stack
 ```bash
 # navigate to monitoring directory
 cd monitoring
