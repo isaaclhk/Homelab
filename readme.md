@@ -4,6 +4,7 @@
 - kubectl
 - helm
 - K3s
+- flux
 
 Clone the repository:
 ```
@@ -48,6 +49,45 @@ scp <user>@<target-ip>:/home/user/k3s.yaml .
 mkdir -p ~/.kube
 vim k3s.yaml # edit the IP
 mv k3s.yaml .kube/config
+```
+
+## GitOps with Flux
+
+### What is GitOps
+GitOps is a way to manage Kubernetes clusters and applications using Git as the single source of truth.  
+- Cluster configuration is stored in a Git repository  
+- Any change to the repository (new deployment, config update, secret rotation) is automatically applied to the cluster  
+- Pull requests become the deployment pipeline  
+
+### Why Flux
+[Flux](https://fluxcd.io/) is a GitOps operator for Kubernetes. It:  
+- Watches your Git repository for changes  
+- Applies those changes to your cluster  
+- Ensures the cluster always matches what is declared in Git  
+
+If someone manually changes the cluster, Flux will reconcile it back to match the Git state.
+
+### How it Works
+1. Install Flux into your cluster and connect it to your GitHub or GitLab repository  
+2. Store Kubernetes manifests, Helm releases, or Kustomize overlays in the repository  
+3. Flux continuously reconciles the cluster state with the repository  
+4. Update the cluster by making changes in Git and merging pull requests  
+
+### Repository Structure
+```bash
+kube/
+├── clusters/
+│   └── prod/
+│       └── kustomization.yaml
+├── apps/
+│   ├── nginx/
+│   │   ├── deployment.yaml
+│   │   └── service.yaml
+│   └── redis/
+│       └── helmrelease.yaml
+└── infrastructure/
+    └── monitoring/
+        └── kustomization.yaml
 ```
 
 ## Homarr
