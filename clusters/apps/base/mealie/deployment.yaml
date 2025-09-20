@@ -15,6 +15,11 @@ spec:
       labels:
         app: mealie
     spec:
+      securityContext:
+        runAsUser: 911
+        runAsGroup: 911
+        fsGroup: 911
+        runAsNonRoot: true
       containers:
         - image: ghcr.io/mealie-recipes/mealie:latest
           name: mealie
@@ -23,6 +28,10 @@ spec:
           volumeMounts:
             - mountPath: /app/data
               name: mealie-data
+          securityContext:
+            capabilities:
+              drop: ["ALL"]
+            allowPrivilegeEscalation: false
       volumes:
         - name: mealie-data
           persistentVolumeClaim:
