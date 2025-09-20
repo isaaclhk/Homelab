@@ -2,10 +2,10 @@
 
 ## Prerequisites
 - kubectl
-- helm
-- K3s
-- flux
-- A cloudflare domain
+- [helm](https://helm.sh/docs/)
+- [K3s](https://docs.k3s.io/quick-start)
+- [flux](https://fluxcd.io/flux/get-started/)
+- [A cloudflare domain](https://www.cloudflare.com/products/registrar/)
 
 Clone the repository:
 ```
