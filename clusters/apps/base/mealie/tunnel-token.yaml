@@ -1,0 +1,23 @@
+apiVersion: v1
+data:
+    token: ENC[AES256_GCM,data:FKHJhdLbCjTCbphI4dlRz9ZtAGeCAZdU0ET0R1aLmeoNeEgB2NcSi/IM7/VoloRKeVqh7L8V693iokNGNzfkUr2fNpadVYow1bJUr0sm2WZuuG1hRzjGc2rBBeVTLnEjgjWRcUim3Pnog92h+PZV/cTgGSCe0tCzV+wGNHvCAOB8HMZNgzzzdQxXnMs5lTm794ZhQ99xopwsaAX99H/duMT4x2E+M31Jx4Oe6dIV+9Z8xDxiI9hCxcx9jzhaLSA92KJQRtF3kNThH5PbkeRCzv9XNzU4ecC/xGYm10g+/uM8UxGdUtcuAO78WA1KgJ8bYSAO+MEKZi0=,iv:hRlre72bALl4vhTKgBZkLJiYkL2NeIbz4BANnhD5jaI=,tag:Eai0gtkDnWjUY2QwcLQDEQ==,type:str]
+kind: Secret
+metadata:
+    name: tunnel-token
+    namespace: default
+type: Opaque
+sops:
+    age:
+        - recipient: age1dknxwrzsnv2aq7lar4jznk89wrv7hfcjc0cmj9tf5kkcsqwptgeq3zw0lu
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBQL2d2ODVDWjBhZGNoVjRX
+            ZjhMNGZvOWVEa3RrS0lpdVlmdVpWSjZoQUNRClB3VURyRnZYWUlYZm1wM1pBQ3Jo
+            OGtWWjI1UnNqeHhWUEp3RENYZktuRWMKLS0tICtwNDJJcnNrd1FqeUd3VGh2d1R5
+            SXFYN0thaVg1U1hrUHpxMzAvZkw5Mk0KOmZslWmcxJrA4bAkVCBbE3um08UuMZwi
+            iQFmM6R8bQcRiAP0RgZyphw9LVxeTqZyKelr8mnDlWX8C/Xhoa4FVQ==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2025-09-20T09:11:00Z"
+    mac: ENC[AES256_GCM,data:YoBu4hz8s0kuSfpdVjt5mxbrVz+lGZpGEtMk9ssh9mD6LQUg2H87l/EnYtdM6hicAjPzJKOTLR/2VE5CZChsEIjQ2S7eRfvqd6ZJ5sZXoYcCv0tGA5H9DnHXcKT4reO273ZGTlf3bWpLwSuxIg0G7Ym404eoRCuy210XWl4nQpc=,iv:+pq+tkdbao1iXBMvi5OzevrGyp0szfpu7QXlNaP/G/Q=,tag:FhkmtTLYbQo908YP8Frv8g==,type:str]
+    encrypted_regex: ^(data|stringData)$
+    version: 3.10.2
