@@ -5,6 +5,7 @@
 - helm
 - K3s
 - flux
+- A cloudflare domain
 
 Clone the repository:
 ```
@@ -168,3 +169,41 @@ kubectl apply -f loadbalancer.yaml
 ```
 
 Import the dashboard by uploading the `dashboard.json`.
+
+## Exposing Apps to the Internet via Cloudflare
+
+### Overview
+Cloudflare is a cloud-based service that provides security, performance, and reliability for websites and applications.  It acts as a reverse proxy, sitting between users and your server, to protect and accelerate traffic. 
+
+A guide on how to expose a Kubernetes service to the public Internet using a remotely managed Cloudflare Tunnel is available [here](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/deployment-guides/kubernetes/).
+
+### Key Services
+- **Content Delivery Network (CDN)**  
+  Delivers cached copies of your site from servers around the world for faster load times.
+
+- **DDoS Protection**  
+  Shields your site from distributed denial-of-service attacks.
+
+- **Web Application Firewall (WAF)**  
+  Filters malicious requests and blocks common attacks such as SQL injection or cross-site scripting.
+
+- **DNS Management**  
+  Provides fast and reliable domain name resolution.
+
+- **SSL/TLS Encryption**  
+  Automatically manages certificates to enable secure HTTPS connections.
+
+- **Zero Trust and Access Control**  
+  Protects internal applications and services without the need for a traditional VPN.
+
+### How It Works
+1. A visitor tries to access your website.  
+2. The request is routed through Cloudflare’s global network.  
+3. Cloudflare checks for threats, serves cached content if possible, and forwards safe traffic to your server.  
+4. Responses from your server are optimized and cached before being sent back to the visitor.  
+
+### Benefits
+- Faster performance through global caching and optimization  
+- Stronger security with built-in protection against attacks  
+- Increased reliability with traffic routed around server outages  
+- Simplified operations with managed DNS and automatic SSL  
