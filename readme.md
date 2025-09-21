@@ -187,31 +187,17 @@ homarr homarr-labs/homarr \
 ```
 
 
-### Grafana-Prometheus Monitoring Stack
-```bash
-# navigate to monitoring directory
-cd monitoring
+### [Prometheus-Grafana Monitoring Stack](https://github.com/prometheus-community/helm-charts/tree/main)
 
-# add the Helm chart repository and update it
-helm repo add prometheus-community \
-https://prometheus-community.github.io/helm-charts
-helm repo update
+A collection of Helm charts maintained by the Prometheus community, used to deploy Prometheus, Grafana, Alertmanager, and related exporters/tools in Kubernetes environments.  
 
-# create a namespace for the monitoring stack
-kubectl create namespace monitoring
+#### Key Features
+- Charts maintained by the Prometheus community on GitHub  
+- Supports installation via Helm (`prometheus-community` repo)  
+- Provides OCI artifacts for all charts  
+- Cluster monitoring, alerting, and exporting metrics
 
-# install
-helm install prometheus-stack \
-prometheus-community/kube-prometheus-stack \
--n monitoring
-
-# upgrade with the custom values file
-helm upgrade \
--f values.yaml \
-prometheus-stack prometheus-community/kube-prometheus-stack
-
-# apply the load balancer configuration
-kubectl apply -f loadbalancer.yaml
-```
-
-Import the dashboard by uploading the `dashboard.json`.
+To use Grafana:  
+- Import dashboards by uploading the `dashboard.json` file.  
+- Default login: **admin / password**  
+- For security, change the default password immediately after your first login.
