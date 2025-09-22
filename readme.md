@@ -201,5 +201,22 @@ To use Grafana:
 - Import dashboards by uploading the `dashboard.json` file.  
 - Default login: **admin / password**  
 - For security, change the default password immediately after your first login.
+- Grafana is configured using ingress to only be accessible from the local area network.
 
-Note: Grafana is configured using ingress to only be accessible from the local area network.
+#### Accessing Grafana
+##### Option 1: Private DNS via Cloudflare (Recommended)
+
+##### Option 2: Static Host Mapping
+To make the hostname resolve to your cluster node IP, add an entry to your `/etc/hosts` file:
+
+```bash
+sudo vim /etc/hosts
+```
+Then append a line with your cluster node’s IP and chosen hostname, for example:
+```vim
+192.168.1.50 grafana.mydomain.com
+```
+After saving, you can access Grafana in your browser at:
+```text
+http://grafana.mydomain.com
+```
