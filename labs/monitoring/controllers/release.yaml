@@ -33,4 +33,4 @@ spec:
         enabled: true
         ingressClassName: traefik
         hosts:
-          - grafana.lab-lab.cc
+          - grafana.lam-lab.cc
