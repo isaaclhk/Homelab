@@ -201,3 +201,5 @@ To use Grafana:
 - Import dashboards by uploading the `dashboard.json` file.  
 - Default login: **admin / password**  
 - For security, change the default password immediately after your first login.
+
+Note: Grafana is configured using ingress to only be accessible from the local area network.
