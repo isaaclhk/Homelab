@@ -205,6 +205,9 @@ To use Grafana:
 
 #### Accessing Grafana
 ##### Option 1: Private DNS via Cloudflare (Recommended)
+From your cloudflare dashboard -> click on your domain -> DNS -> Records \
+Add a DNS A record with your desired name and IPv4 address. Set it to DNS only.
+
 
 ##### Option 2: Static Host Mapping
 To make the hostname resolve to your cluster node IP, add an entry to your `/etc/hosts` file:
