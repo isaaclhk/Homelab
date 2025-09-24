@@ -129,6 +129,7 @@ A guide on how to expose a Kubernetes service to the public Internet using a rem
 - Simplified operations with managed DNS and automatic SSL  
 
 ## Managing Secrets
+### Encryption and Decryption
 In this lab, secrets are encrypted using age. \
 Read the [docs](https://fluxcd.io/flux/guides/mozilla-sops/) for more details. In particular, pay attention to the following sections:
 - Configure the Git directory for encryption 
@@ -137,6 +138,20 @@ Read the [docs](https://fluxcd.io/flux/guides/mozilla-sops/) for more details. I
 Note: 
 1. The `.sops.yaml` is usually placed at the root directory for consistency. Add specific `.sops.yaml` files in subdirectories only if those apps need different encryption keys or rules.
 2. ⚠️ Remember to encrypt the secret files before pushing to repository.
+
+### Self-signed TLS Certificate
+
+A [self-signed TLS certificate](https://www.digitalocean.com/community/tutorials/openssl-essentials-working-with-ssl-certificates-private-keys-and-csrs) is a digital certificate that is generated and signed by the same entity, rather than being issued by a trusted Certificate Authority (CA).  
+It contains the same components as a CA-signed certificate (such as domain, public key, and validity period), but since it is not verified by a third party, browsers and clients will typically display a warning.
+
+### Benefits
+
+- **Encryption**: Enables HTTPS, ensuring that data exchanged between client and server is encrypted.  
+- **Practical for Non-Production**: Useful in development, testing, and internal environments where trust warnings are acceptable.  
+- **Cost-Effective**: Can be created quickly and free of charge without relying on an external CA.  
+
+> **Note**: For production systems or public-facing services, a CA-signed certificate (e.g., from Let’s Encrypt) is strongly recommended to establish trust and prevent browser security warnings.
+
 
 ## Apps
 ### [Linkding](https://github.com/sissbruecker/linkding)
