@@ -128,8 +128,8 @@ A guide on how to expose a Kubernetes service to the public Internet using a rem
 - Increased reliability with traffic routed around server outages  
 - Simplified operations with managed DNS and automatic SSL  
 
-## Managing Secrets
-### Encryption and Decryption
+## Security
+### Encrypting and Decrypting Secrets
 In this lab, secrets are encrypted using age. \
 Read the [docs](https://fluxcd.io/flux/guides/mozilla-sops/) for more details. In particular, pay attention to the following sections:
 - Configure the Git directory for encryption 
