@@ -36,5 +36,5 @@ spec:
           - grafana.lam-lab.cc
         tls:
           - secretName: grafana-tls-secret
-          hosts:
-            - grafana.lam-lab.cc
+            hosts:
+              - grafana.lam-lab.cc
