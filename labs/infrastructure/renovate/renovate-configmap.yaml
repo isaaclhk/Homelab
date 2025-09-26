@@ -5,6 +5,5 @@ metadata:
   namespace: renovate
 data:
   RENOVATE_AUTODISCOVER: 'false'
-  RENOVATE_ENDPOINT: 'https://github.com/isaaclhk/Homelab'
   RENOVATE_GIT_AUTHOR: 'Renovate Bot <bot@renovateapp.com>'
   RENOVATE_PLATFORM: 'github'
