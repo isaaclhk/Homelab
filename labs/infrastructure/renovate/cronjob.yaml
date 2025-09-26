@@ -16,7 +16,6 @@ spec:
               envFrom:
                 - secretRef:
                     name: renovate-env
-              envFrom:
                 - configMapRef:
                     name: renovate-configmap
           restartPolicy: Never
