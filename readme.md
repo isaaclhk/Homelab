@@ -201,7 +201,7 @@ homarr homarr-labs/homarr \
 -n homarr
 ```
 
-
+## Monitoring
 ### [Prometheus-Grafana Monitoring Stack](https://github.com/prometheus-community/helm-charts/tree/main)
 
 A collection of Helm charts maintained by the Prometheus community, used to deploy Prometheus, Grafana, Alertmanager, and related exporters/tools in Kubernetes environments.  
@@ -238,16 +238,12 @@ After saving, you can access Grafana in your browser at:
 ```text
 http://grafana.mydomain.com
 ```
+## Infrastructure
+### Automatic Image Updates via [Renovate](https://docs.renovatebot.com/examples/self-hosting/)
 
-## Automatic Image Updates
-Renovate is used in this lab to automate image updates.
-### [Renovate](https://docs.renovatebot.com/examples/self-hosting/)
 Renovate is an automation tool designed to manage and update dependencies, including Docker images, Helm charts, and Kubernetes manifests. Rather than relying on the non-deterministic :latest tag, Renovate continuously monitors registries for new versions and generates merge or pull requests with proposed updates.
 
 By integrating Renovate into your workflow, you gain:
 - Reproducibility – Builds are consistent and traceable across environments.
 - Transparency – Updates are surfaced as reviewable requests before merging.
 - Governance – Policies, schedules, and automerge rules ensure controlled updates
-
-### [Flux](https://fluxcd.io/flux/guides/image-update/) 
-Flux provides an alternative approach by automating image updates directly within a GitOps workflow. Unlike Renovate, which emphasizes reviewable pull requests, Flux can automatically detect new image tags and update Git repositories in real time, making it well-suited for teams seeking continuous, in-cluster automation.
