@@ -8,3 +8,4 @@ data:
   RENOVATE_GIT_AUTHOR: 'Renovate Bot <bot@renovateapp.com>'
   RENOVATE_PLATFORM: 'github'
   RENOVATE_REPOSITORIES: '["isaaclhk/Homelab"]'
+  LOG_LEVEL: 'debug'
