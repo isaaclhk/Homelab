@@ -4,5 +4,6 @@ kind: Kustomization
 namespace: homarr
 resources:
 - ../../base/homarr/
+- db-secret.yaml
 - tunnel-token.yaml
 - tunnel.yaml
