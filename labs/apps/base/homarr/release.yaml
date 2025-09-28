@@ -17,6 +17,8 @@ spec:
   releaseName: homarr
   values:
     replicaCount: 1
+    rbac:
+      enabled: true
     persistence:
       homarrDatabase:
         enabled: true
