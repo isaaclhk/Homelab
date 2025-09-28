@@ -169,37 +169,21 @@ A simple, self-hosted bookmark manager.
 Mealie is an open-source, self-hosted recipe manager and meal planner.  
 It lets you save recipes, plan meals, and generate shopping lists - all in one place.  
 
+#### Key Features
 - Import or create recipes  
 - Plan meals for the week  
 - Auto-generate grocery lists  
 - Multi-user and smart home integrations  
 
-### Homarr
-```bash
-# navigate to homarr directory
-cd homarr
+### [Homarr](https://homarr.dev/docs/getting-started/installation/helm/)
+Homarr is a self-hosted dashboard that consolidates all your apps, services, and bookmarks into a single, customizable interface. With its clean design and ease of use, Homarr serves as a central hub for managing and monitoring your homelab or personal infrastructure.  
 
-# add the Helm chart repository and update it
-helm repo add homarr-labs https://homarr-labs.github.io/charts/
-helm repo update
+#### Key Features
+- Customizable layout with Drag-and-drop widgets and apps
+- Real-time status indicators for quick health checks.  
+- One-click entry to apps, bookmarks, and services.  
+- Display useful information such as weather, system stats, and more.  
 
-# create a namespace for homarr
-kubectl create namespace homarr 
-
-# install Homarr in the homarr namespace
-helm install homarr homarr-labs/homarr -n homarr
-
-# apply persistent volume configuration
-kubectl apply -f storage.yaml
-
-# apply load balancer configuration
-kubectl apply -f loadbalancer.yaml
-
-# upgrade Homarr with the custom values file
-helm upgrade -f values.yaml \
-homarr homarr-labs/homarr \
--n homarr
-```
 
 ## Monitoring
 ### [Prometheus-Grafana Monitoring Stack](https://github.com/prometheus-community/helm-charts/tree/main)
