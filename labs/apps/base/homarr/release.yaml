@@ -20,6 +20,6 @@ spec:
     persistence:
       homarrDatabase:
         enabled: true
-        name: homarr-database
+        storageClassName: local-path
         mountPath: /app/data
-        volumeClaimName: homarr-pvc
+        size: 500Mi
