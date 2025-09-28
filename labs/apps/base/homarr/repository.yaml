@@ -5,4 +5,4 @@ metadata:
   namespace: homarr
 spec:
   interval: 24h
-  url: https://homarr-labs.github.io/charts/charts/homarr/
+  url: https://homarr-labs.github.io/charts/
