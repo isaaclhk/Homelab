@@ -15,6 +15,10 @@ spec:
       labels:
         app: audiobookshelf
     spec:
+      securityContext:
+        runAsUser: 1000
+        runAsGroup: 1000
+        fsGroup: 1000
       containers:
       - image: ghcr.io/advplyr/audiobookshelf:2.29.0
         name: audiobookshelf
@@ -30,6 +34,10 @@ spec:
             name: config-data
           - mountPath: "./metadata/backups"
             name: backups-data
+        securityContext:
+          allowPreviligeEscalation: false
+          capabilities:
+            drop: ["ALL"]
       volumes:
         - name: config-data
           persistentVolumeClaim:
