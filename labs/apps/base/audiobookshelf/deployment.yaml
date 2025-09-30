@@ -28,14 +28,14 @@ spec:
           - configMapRef:
               name: audiobookshelf-env
         volumeMounts:
-          - mountPath: "./metadata"
+          - mountPath: "/metadata"
             name: metadata-data
-          - mountPath: "./config"
+          - mountPath: "/config"
             name: config-data
-          - mountPath: "./metadata/backups"
+          - mountPath: "/metadata/backups"
             name: backups-data
         securityContext:
-          allowPreviligeEscalation: false
+          allowPrivilegeEscalation: false
           capabilities:
             drop: ["ALL"]
       volumes:
