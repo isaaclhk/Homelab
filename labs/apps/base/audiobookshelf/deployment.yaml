@@ -4,7 +4,6 @@ metadata:
   labels:
     app: audiobookshelf
   name: audiobookshelf
-  namespace: audiobookshelf
 spec:
   replicas: 1
   selector:

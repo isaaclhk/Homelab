@@ -4,7 +4,6 @@ metadata:
   labels:
     app: linkding
   name: linkding
-  namespace: linkding
 spec:
   ports:
   - port: 9090

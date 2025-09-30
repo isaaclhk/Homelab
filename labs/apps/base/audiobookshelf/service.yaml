@@ -4,7 +4,6 @@ metadata:
   labels:
     app: audiobookshelf
   name: audiobookshelf
-  namespace: audiobookshelf
 spec:
   ports:
   - port: 3005
