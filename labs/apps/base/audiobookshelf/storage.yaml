@@ -22,13 +22,13 @@ spec:
   volumeMode: Filesystem
   resources:
     requests:
-      storage: 10Gi
+      storage: 1Gi
   storageClassName: local-path
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: backups-pvc
+  name: audiobooks
   namespace: audiobookshelf
 spec:
   accessModes:
@@ -36,5 +36,33 @@ spec:
   volumeMode: Filesystem
   resources:
     requests:
-      storage: 10Gi
+      storage: 1Gi
+  storageClassName: local-path
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: books
+  namespace: audiobookshelf
+spec:
+  accessModes:
+    - ReadWriteOnce
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: 1Gi
+  storageClassName: local-path
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: podcasts
+  namespace: audiobookshelf
+spec:
+  accessModes:
+    - ReadWriteOnce
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: 1Gi
   storageClassName: local-path

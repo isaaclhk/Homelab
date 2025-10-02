@@ -31,8 +31,12 @@ spec:
             name: metadata-data
           - mountPath: "/config"
             name: config-data
-          - mountPath: "/metadata/backups"
-            name: backups-data
+          - mountPath: "/audiobooks"
+            name: audiobooks-data
+          - mountPath: "/books"
+            name: books-data
+          - mountPath: "/podcasts"
+            name: podcasts-data
         securityContext:
           allowPrivilegeEscalation: false
           capabilities:
@@ -44,7 +48,13 @@ spec:
         - name: metadata-data
           persistentVolumeClaim:
             claimName: metadata-pvc
-        - name: backups-data
+        - name: audiobooks-data
           persistentVolumeClaim:
-            claimName: backups-pvc
+            claimName: audiobooks
+        - name: books-data
+          persistentVolumeClaim:
+            claimName: books
+        - name: podcasts-data
+          persistentVolumeClaim:
+            claimName: podcasts
 
