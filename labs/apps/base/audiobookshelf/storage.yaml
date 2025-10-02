@@ -36,7 +36,7 @@ spec:
   volumeMode: Filesystem
   resources:
     requests:
-      storage: 1Gi
+      storage: 5Gi
   storageClassName: local-path
 ---
 apiVersion: v1
@@ -50,7 +50,7 @@ spec:
   volumeMode: Filesystem
   resources:
     requests:
-      storage: 1Gi
+      storage: 5Gi
   storageClassName: local-path
 ---
 apiVersion: v1
@@ -64,5 +64,5 @@ spec:
   volumeMode: Filesystem
   resources:
     requests:
-      storage: 1Gi
+      storage: 5Gi
   storageClassName: local-path
