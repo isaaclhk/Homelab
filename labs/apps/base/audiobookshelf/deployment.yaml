@@ -50,11 +50,11 @@ spec:
             claimName: metadata-pvc
         - name: audiobooks-data
           persistentVolumeClaim:
-            claimName: audiobooks
+            claimName: audiobooks-pvc
         - name: books-data
           persistentVolumeClaim:
-            claimName: books
+            claimName: books-pvc
         - name: podcasts-data
           persistentVolumeClaim:
-            claimName: podcasts
+            claimName: podcasts-pvc
 
