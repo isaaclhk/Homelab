@@ -184,6 +184,18 @@ Homarr is a self-hosted dashboard that consolidates all your apps, services, and
 - One-click entry to apps, bookmarks, and services.  
 - Display useful information such as weather, system stats, and more.  
 
+### [Audiobookshelf](https://www.audiobookshelf.org/)
+Audiobookshelf is a self-hosted audiobook and podcast server with a modern web interface and apps for iOS/Android. It lets you host, stream, and manage your personal audiobook and podcast collections without relying on third-party services.
+
+**Key Features:**
+- Stream audiobooks and podcasts through a browser or mobile app
+- Supports MP3, M4B, and most common audio formats
+- Keeps track of listening progress across devices
+- Rich metadata management with cover art and descriptions
+- Multi-user support with separate libraries and progress
+- Offline downloads for mobile listening
+
+
 
 ## Monitoring
 ### [Prometheus-Grafana Monitoring Stack](https://github.com/prometheus-community/helm-charts/tree/main)
