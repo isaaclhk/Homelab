@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       chart: otterwiki
-      version: "2.14.1"
+      version: "v2.14.1"
       sourceRef:
         kind: HelmRepository
         name: otterwiki
