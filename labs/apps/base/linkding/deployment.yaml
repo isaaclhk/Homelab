@@ -19,7 +19,7 @@ spec:
         runAsGroup: 33
         fsGroup: 33
       containers:
-        - image: sissbruecker/linkding:1.43.0
+        - image: sissbruecker/linkding:1.44.0
           name: linkding
           volumeMounts:
             - mountPath: /etc/linkding/data
