@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: mysql-env
+type: Opaque
+stringData:
+    MYSQL_DATABASE: ENC[AES256_GCM,data:JG1BFeQ=,iv:RJ92uBEdk41h8cdswoFJBK9Kg9CgILfTNH/hz6tcuBk=,tag:g1bohuwq3LlFa71Rcg4hMQ==,type:str]
+    MYSQL_USER: ENC[AES256_GCM,data:lqgLTw==,iv:pgN/UEWYiQMNctkjlAHV7Hn+itToyZLfJld1WZK/iAk=,tag:y+dkKkaS0Sf0435CXzxSFg==,type:str]
+    MYSQL_PASSWORD: ENC[AES256_GCM,data:vuxVL9I86xY=,iv:vk3RxhwGprnJ1zWKNCkTxh8mlqIzuD8OgdlX7xvIujI=,tag:InTtiJ+ET9uNvPZ45oMe3Q==,type:str]
+    MYSQL_ROOT_PASSWORD: ENC[AES256_GCM,data:SC0PnHyT2ZGWBqiXeg==,iv:0zh4k04NKVnLBG4GNgLGgGfSmDps2+1R159HWYU3nDY=,tag:sODlNXoeOxnRC2PDACpZ8Q==,type:str]
+sops:
+    age:
+        - recipient: age1dknxwrzsnv2aq7lar4jznk89wrv7hfcjc0cmj9tf5kkcsqwptgeq3zw0lu
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBBKzVkTmc0TUlwWGRCR3Bo
+            RkNSVzRGZVdidjhxSWpWVitpVzdsekhpVUMwCkdMK3lEd2tUaklMc0xJd2wraXp0
+            REgrV0Fsazg4SXpHdzlkeU5lTXB3dDAKLS0tIFljbm5qMHdYUVlRVDdXdHBGV1JT
+            L0RVNGtQT3djM24yMzB6OWRzVVBDNXcKG/13pEDic+aaUI81DSHmEeZpfxAqQxxq
+            pxd/DxzHULLLbW5AdVxybooYaEgK7ss/irvV5zof7jAl1zEEbO3JWA==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2025-10-08T16:04:55Z"
+    mac: ENC[AES256_GCM,data:On4Gyxda7WJi56egga2ANUbBIU6hMSH0bfYVPLdoxnibAe2MR/ZhgmG5KcYlNilOUZi9Fz89Tcmx1R4cpmAjb6bw9Sm+i0P+kdjMNG3P/T3P7+rXWIDiQrjrunhNTho+FmD4uaoSaHR8ZyELBwi70oKoQcJNMgHvTbi12Cor70Q=,iv:PGsKIcUw/U1UMgZZShKX0Jk8xZt1VMBOl4/WBehP6sY=,tag:ABMgPVop7T72gVhfHlccRg==,type:str]
+    encrypted_regex: ^(data|stringData)$
+    version: 3.10.2

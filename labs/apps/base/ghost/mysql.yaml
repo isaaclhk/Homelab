@@ -1,0 +1,109 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: mysql
+spec:
+  serviceName: mysql-service
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      initContainers:
+      - name: mysql-init
+        securityContext:
+          allowPrivilegeEscalation: false
+          privileged: false
+          readOnlyRootFilesystem: true
+        image: docker.io/busybox:stable-musl
+        imagePullPolicy: Always
+        command:
+        - /bin/sh
+        - -c
+        - |
+          set -e
+          echo 'Changing ownership of mysql mount directory to 65534:65534'
+          chown -Rfv 65534:65534 /mnt/mysql || echo 'Error changing ownership of mysql mount directory to 65534:65534'
+          echo 'Changing ownership of tmp mount directory to 65534:65534'
+          chown -Rfv 65534:65534 /mnt/tmp || echo 'Error changing ownership of tmp mount directory to 65534:65534'
+          echo 'Changing ownership of socket mount directory to 65534:65534'
+          chown -Rfv 65534:65534 /mnt/var/run/mysqld || echo 'Error changing ownership of socket mount directory to 65534:65534'
+
+        volumeMounts:
+        - name: mysql-volume
+          mountPath: /mnt/mysql
+          readOnly: false
+
+        - name: mysql-tmp
+          mountPath: /mnt/tmp
+          readOnly: false
+
+        - name: mysql-socket
+          mountPath: /mnt/var/run/mysqld
+          readOnly: false
+
+        resources:
+          requests:
+            memory: 0Mi
+            cpu: 0m
+          limits:
+            memory: 1Gi
+            cpu: 900m
+
+      containers:
+      - name: mysql
+        securityContext:
+          allowPrivilegeEscalation: false
+          privileged: false
+          readOnlyRootFilesystem: true
+          runAsNonRoot: true
+          runAsUser: 65534
+
+        image: docker.io/mysql:8.4
+        imagePullPolicy: Always
+        envFrom:
+        - secretRef:
+            name: mysql-env
+        resources:
+          requests:
+            memory: 500Mi
+            cpu: 300m
+          limits:
+            memory: 1Gi
+            cpu: 900m
+        ports:
+        - containerPort: 3306
+          protocol: TCP
+        volumeMounts:
+        - name: mysql-volume
+          mountPath: /var/lib/mysql
+          readOnly: false
+
+        - name: mysql-tmp
+          mountPath: /tmp
+          readOnly: false
+
+        - name: mysql-socket
+          mountPath: /var/run/mysqld
+          readOnly: false
+
+      automountServiceAccountToken: false
+
+      securityContext:
+        seccompProfile:
+          type: RuntimeDefault
+
+      volumes:
+      - name: mysql-volume
+        persistentVolumeClaim:
+          claimName: mysql-pvc
+      - name: mysql-tmp
+        emptyDir:
+          sizeLimit: 128Mi
+      - name: mysql-socket
+        emptyDir:
+          sizeLimit: 128Mi
