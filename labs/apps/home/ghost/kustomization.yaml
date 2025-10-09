@@ -3,3 +3,5 @@ kind: Kustomization
 namespace: ghost
 resources:
 - ../../base/ghost/
+- tunnel.yaml
+- tunnel-token.yaml
