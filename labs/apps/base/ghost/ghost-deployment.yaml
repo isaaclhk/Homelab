@@ -128,7 +128,7 @@ spec:
         - name: ghost-content
           mountPath: /home/nonroot/app/ghost/content
           readOnly: false
-        - name: ghost-config-prod
+        - name: ghost-config
           readOnly: true
           mountPath: /home/nonroot/app/ghost/config.production.json
           subPath: config.production.json
