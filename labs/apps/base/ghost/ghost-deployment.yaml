@@ -38,9 +38,9 @@ spec:
         image: docker.io/busybox:stable-musl
         env:
         - name: GHOST_INSTALL
-          value: /home/nonroot/app/ghost
+          value: /var/lib/ghost
         - name: GHOST_CONTENT
-          value: /home/nonroot/app/ghost/content
+          value: /var/lib/ghost/content
         - name: NODE_ENV
           value: production
         securityContext:
@@ -73,7 +73,7 @@ spec:
 
         volumeMounts:
         - name: ghost-content
-          mountPath: /home/nonroot/app/ghost/content
+          mountPath: /var/lib/ghost/content
           readOnly: false
 
       containers:
@@ -126,7 +126,7 @@ spec:
 
         volumeMounts:
         - name: ghost-content
-          mountPath: /home/nonroot/app/ghost/content
+          mountPath: /var/lib/ghost/content
           readOnly: false
         - name: ghost-config
           readOnly: true

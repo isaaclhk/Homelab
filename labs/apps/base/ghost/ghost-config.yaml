@@ -6,19 +6,19 @@ metadata:
         app: ghost
 type: Opaque
 stringData:
-    config.production.json: ENC[AES256_GCM,data:X5AUzX43fXRoYbamNl0xlQiwU3B52ACD/YFn8h47Syw4+zDiz3BL6w4ZJy9r/ALjskNUwfOv9/5KaAua+CEIKzrJQsMPfWGwtRum26wOSPXv6625I2lRHG5vZ2MYBPGS+8PV4rPUgkaeAv65XalnAC231kla53a8ifolKdzRH/vMehz7QGP4s1UtRSAfJ49WZsWVqUa22T9iXTB4joqzo6DEmjucjKd7vn3P+vlVDcDr1Vzk7W5LvQahFH2kn0oSUovbFWWZZO9rRl0N/IdTpFzxpZCgvHgD3C/wVSnrfvp6qL0fNj1VH30bbWzJRznmyMHfRpTXTFvJ4OcV8lq236asyFGrdHqbn1/aXfPsXB3qXIkOeUo0Vd34sWYVOFg38mzU+zbXb+hNMOoZGB0Wy3AFsj9rYREEPFkQyOP2qabCN6vyUbjn/9i09ErOhkJRJFkPABhXLY280NZ8QWMooCUz+XY+Gq8Q0HFJaR1XL3l4O6AhFBe2z07vxEMuT3jC+2lDnmpqXvM+a32+KhtLUSg90k1xFDDIc8dSJmVb2JJum1iqO1yFS0QDNipVOTnA1XGPS/g2UZqRN4RUo4+g6m7IX+CmBkBVvE0aFeWJs3JG+O+JOETrkFHeYnxWjSM/p0UjNVpDQoNhuXkYuOBTtVSb8jeFl6tcDmINQ2N7my1mCSJL6gqvyLGULGl9ct9JJ4ukn4us/1Q0oWvie2+9q8EV5bzunbi5uUbTrFQEkV1jHzXR3sy26Ha2AaoSLyo0E3l/SO58KCfa+VyJiI2tVxMa26GE0JcxQ6s9GtxobvmOd2WVu2zOoTYJSaCgv0S2LUNgAa1oujsurcb2dFVxlebDr0DgYHXEkAET/lpUSqwuaEW5PFkCnMwXprZLmJ4qCVmPVSGudaEPIqTTG3dlNyn58gr8ZeGzKGaP/KmJptWX+6x/Wxg5OmF0m5HZDHxlRVFsOIqstFn+k1k72UW2EJrAGTipkEyf51j29OqLK++Elp311U1K67G90lzKUCl1xiMd8mM5SZWg6gKmxgjY/hfLto+f4WW2OAoSOUZSVZE=,iv:fZnma1uzGZANTbAr8K61n2nn6OIC3bn/pMOb6XcUFlE=,tag:47Ch0PvG6MPnhCC02ABKAg==,type:str]
+    config.production.json: ENC[AES256_GCM,data:qvrgZSa65qLynKSsOa+rveaQ9/xghdXFNEmS0/w35u1CF89xEALrW3YAKXbyCQppubgXv61GnTmy9PtkKnnukSTGrj6xrB84/BZhb0SnL7lnR/Cnhxy4AlqKWsTKEHWfqVfo40HcdLrpwFKRJKnut/UKKiJaEXMVuz8/ewJnnqs9zd2VvOvHt551xVOLsEBCPZoXwgNobLVdB7cdUHcdH+Jq0ST7sJxCbdI5qB//J1BIuP+cAI9Z1RHf0W16smcxSHsDa9FZDj/797WgL1KLgbJodNsQ5dGk1Cjq2o3Mz2BNhNKSGoqXvyty2GTypHAMRrh95g2ZfYf6ljGNf++LNxz0UIE2tVx4arGvNBcklWvR7AwOeE1KqaE5xQLR4rz8/fEC+c4fbbUlq/CbQPk+lmPXyfeYjnXNXejNiEUXWK/kh7vU6FXu+8bOUWV042QRDrZi1z76k/I5Un1lm5+Ck52zkmxj3gn7eL9u78UjOqY9YGSTmJ4s4q/fIa9dXa4wP+hB0snk/TNDVo27QIsHTN68ciNVSf7ENN5aglEIm0NTCM9rZb14xfaZ4ddhBgxzB7Td6cMMj9u4pmtu2jfYi3cDtXOEj+yfGblemhHZT7oFE6mshAlvN7rq+04rixKImZQ25mUcyWpgpcf+ThXdKcboKWwS6zMX+SpgU3DKWto7SGNLEJuO+8Itzyig+oAxDqzOZaUtyOhQNGbEH7A+kQlRNGXIMRPiU+jaPifj1/zED9qMLyMzcqzgdhQ53ZrxC9ZmcPEMrShgPiemo5AY7MhztE8NPFBwWWzaS5YXV7ZA23OaZqLootzNgZNLBPiy5AVM7lQ7Dl8ZRTB/vf4F/jrbRJ1dFJjsXQ+HxKH+EUFqJkQSvspfIpAs/85V1v9iJUrKADChgJ9XpiJ3wVoeO6tDAFoh3liNanFeZ6W+3eZO0PXDgtemie/TXfzpp6UiEWb5opw47Uk/7w==,iv:d0ZTIzwWZicoHRHgxczXJVFBc2I6GxqZ+0ffrodw1ME=,tag:qGO3ZfwSVFMIKhby04B3aw==,type:str]
 sops:
     age:
         - recipient: age1dknxwrzsnv2aq7lar4jznk89wrv7hfcjc0cmj9tf5kkcsqwptgeq3zw0lu
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoTFlqUTN5S1NkMnZucnRX
-            WmlpNzlSTDYvSHFFc1l1dUk4Z1FsekpiMHdZCjBrRWs4RjlXdmRwdFBtRkM3QkNC
-            RG9vY1VHa2hLckJWN0JSQTNsRkhZUkkKLS0tIEtLWER0RkljVWNDaFp2OW9abGJ4
-            Q2JNY1NHaWMzaFRtWlNnajJOb05iL0EK5BZCyiogkUmmaAidkQas8Nl26+SmKuNy
-            x/amz8y3E+Pzd6mm43DR1AUiHt6DvhgJSl81BHJC4XUY28+wZWpCew==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSByNlVyRVlqdW8wclpPaXZt
+            T3RoOXU5b1lHeE0xa0ZOcDV5YzFGakUwd3c0ClIvdFlsdk1aSC9jbHRLelJGRU5W
+            aTlZMXIzZ2VDcW1nZi9WOFpIT2dXTGcKLS0tIHVyS1l0VHVaV3ZYZ3p4ZDlyU21K
+            VHpNMjc0QVhvK3hLWUxDWkZVeEFJc28K30MQqswOWmX6w7zlA76jDLchRnZBsVDU
+            avg16JsfsWkfQthNN+uZrqXI7MIvfhJLGqh0yo4bdEVwydfveKxekA==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2025-10-09T16:05:45Z"
-    mac: ENC[AES256_GCM,data:h/sRgqVYavu8FTq+K6A6eLs+BXGDrVB6a2x72WwoWL3+2M5IIEj9DU7TeZvOqUQUBTC4Le8rxr1WuW/duFHhbWXNMlBYpIlCGiye1/k62ODfbJ97kd656xqee67w4qWIzCa0vEcg1QBitOsqHY8dRhUhX2YvDWNtORDBGqMEmBk=,iv:QQSDu/TcoKczhPkpOW5f54zAT+S3pXbZzdq6h8eZ/Ck=,tag:3vKPGPcxO6npIedQQllfqg==,type:str]
+    lastmodified: "2025-10-09T16:49:47Z"
+    mac: ENC[AES256_GCM,data:6C+rcW/V19xVv9DzV/pNAQEePqISLPYJwCy60HDTH7bVwAqmU0ThkRHU1Zms2PBVr0/n7zwEyM90gSjPy7dWAsHRQaeHi5mBDFtL4iHgmewGAjbMwqmvnNcxzzStnTsFf9yoFgToQ3NHC28fRPQ5LNOvAkvZKc/RpJ2nysO5aVE=,iv:tNrvlEnLFzneUWEa2yA4k8FZzsR6Hg5GlYMXhBb8scc=,tag:CgXwSu77Fq1MbUEstyuOWg==,type:str]
     encrypted_regex: ^(data|stringData)$
     version: 3.10.2
