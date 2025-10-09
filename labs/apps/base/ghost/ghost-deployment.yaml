@@ -130,7 +130,7 @@ spec:
           readOnly: false
         - name: ghost-config
           readOnly: true
-          mountPath: /home/nonroot/app/ghost/config.production.json
+          mountPath: /var/lib/ghost/config.production.json
           subPath: config.production.json
         - name: tmp
           mountPath: /tmp
