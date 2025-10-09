@@ -4,22 +4,22 @@ metadata:
     name: mysql-env
 type: Opaque
 stringData:
-    MYSQL_DATABASE: ENC[AES256_GCM,data:JG1BFeQ=,iv:RJ92uBEdk41h8cdswoFJBK9Kg9CgILfTNH/hz6tcuBk=,tag:g1bohuwq3LlFa71Rcg4hMQ==,type:str]
-    MYSQL_USER: ENC[AES256_GCM,data:lqgLTw==,iv:pgN/UEWYiQMNctkjlAHV7Hn+itToyZLfJld1WZK/iAk=,tag:y+dkKkaS0Sf0435CXzxSFg==,type:str]
-    MYSQL_PASSWORD: ENC[AES256_GCM,data:vuxVL9I86xY=,iv:vk3RxhwGprnJ1zWKNCkTxh8mlqIzuD8OgdlX7xvIujI=,tag:InTtiJ+ET9uNvPZ45oMe3Q==,type:str]
-    MYSQL_ROOT_PASSWORD: ENC[AES256_GCM,data:SC0PnHyT2ZGWBqiXeg==,iv:0zh4k04NKVnLBG4GNgLGgGfSmDps2+1R159HWYU3nDY=,tag:sODlNXoeOxnRC2PDACpZ8Q==,type:str]
+    MYSQL_DATABASE: ENC[AES256_GCM,data:57c7oYI=,iv:o/pzX31eA/BdLKKXacpyK0s0BjqjTSKLHt80HwMn60U=,tag:Hzn97TOy3Don/gLgPjPx7A==,type:str]
+    MYSQL_USER: ENC[AES256_GCM,data:6WO4jg==,iv:z6FjikMl7yDscNGIACMM4A34yStWRudaAl7BEsMVt3w=,tag:0aJK22FR26kT4/O/Y6B5ug==,type:str]
+    MYSQL_PASSWORD: ENC[AES256_GCM,data:OOpVWDvvcgg=,iv:VJsJSB3dKXaXitpmb9/oGE/QVzFc0OSLnc4Df7KPFBw=,tag:xD4z3nD9/T5B/5Fp6el4RQ==,type:str]
+    MYSQL_ROOT_PASSWORD: ENC[AES256_GCM,data:l4FlGjkpLWP10ZrS6w==,iv:5wx0cIMtx3pYtLQpRBY8iKIAm8oKvrKMKuGQn807plA=,tag:CvF9RQRSY7RX3YJXUwzMPw==,type:str]
 sops:
     age:
         - recipient: age1dknxwrzsnv2aq7lar4jznk89wrv7hfcjc0cmj9tf5kkcsqwptgeq3zw0lu
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBBKzVkTmc0TUlwWGRCR3Bo
-            RkNSVzRGZVdidjhxSWpWVitpVzdsekhpVUMwCkdMK3lEd2tUaklMc0xJd2wraXp0
-            REgrV0Fsazg4SXpHdzlkeU5lTXB3dDAKLS0tIFljbm5qMHdYUVlRVDdXdHBGV1JT
-            L0RVNGtQT3djM24yMzB6OWRzVVBDNXcKG/13pEDic+aaUI81DSHmEeZpfxAqQxxq
-            pxd/DxzHULLLbW5AdVxybooYaEgK7ss/irvV5zof7jAl1zEEbO3JWA==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBMSE14ZzUrYngrMmwvK2ht
+            S0hWT2xINEZTTXhzbUMzcm8yd1dCN09panlVCm9rRHhKaDU1VXRSelV5eStVOXEv
+            RG1UZkNydHhHWnlLbVZKV1ROcEVLZGMKLS0tIGVvdm56TE1GSlJOMmZ4VHpQa2pP
+            YWgyWE51dUlhYnhqdXIySFlpZ1JuWXcKnvMG51xQuNvEoW0hvgLUzLOqGDXJ8lND
+            7L0C1igCd0FQi2REv/pPhuYopN0slZ79d2qIl+seNaDlkKRAa4UlvA==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2025-10-08T16:04:55Z"
-    mac: ENC[AES256_GCM,data:On4Gyxda7WJi56egga2ANUbBIU6hMSH0bfYVPLdoxnibAe2MR/ZhgmG5KcYlNilOUZi9Fz89Tcmx1R4cpmAjb6bw9Sm+i0P+kdjMNG3P/T3P7+rXWIDiQrjrunhNTho+FmD4uaoSaHR8ZyELBwi70oKoQcJNMgHvTbi12Cor70Q=,iv:PGsKIcUw/U1UMgZZShKX0Jk8xZt1VMBOl4/WBehP6sY=,tag:ABMgPVop7T72gVhfHlccRg==,type:str]
+    lastmodified: "2025-10-09T16:05:53Z"
+    mac: ENC[AES256_GCM,data:BAmJ/ExsHkY9wHmHgHj478wKrPgoPkTYGL4bCX9Su/MAQKG4BmYEJkIJaSsC4IHYjUSMFjjH605i4m+BLs8wndSYr+VwXMuWfXfNt1retyOabd+TFlO2mjYQ/Y+tq6+yNpVGJTsDOdw0E+0VboFBqGpq+Yl/tvLjgXMjaZZALDg=,iv:NpyDAl06THBzWAcXpW6FPV20XONtNfnybSSM4L2tnfQ=,tag:zfbZNenqmFst6t8lfOZUfA==,type:str]
     encrypted_regex: ^(data|stringData)$
     version: 3.10.2
