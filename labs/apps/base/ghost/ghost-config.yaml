@@ -6,19 +6,19 @@ metadata:
         app: ghost
 type: Opaque
 stringData:
-    config.production.json: ENC[AES256_GCM,data:h0XsD4vybmMPWOt9oJmwjSpEA8U7NauBvxiT/ElbpH62454qEOtrIIrd6YdsaaYT+DKQVXHutpbdtTyUQVZ3P4+UsRcEO7vNGn2tnZoZl3RhMbLQ+hTqGGyh14JXBNfW0rN3d/x8pMZbq0PQCtmpG3htsEHglGzTT+Ye0eqmzCa5Xi6gHZlkW0MuDtn43eLRX6IStWmqj/oQ+LjanQv2C0jsBTlGndUGXEcdsSp63RM1S9fQTU8+OOdZ3+HZSfFmwXh5JZ5yVHrnYSTyv/ZHxblvwvXydG+svBpG5R6fZ/cUcjYjU8hQhrrbjW7q3r0JiH7vjphSsKYcsA/aJFdFbvqigKgbvW49TInwUo/fjwhMCquK2QB529PTNWaqj0BY4BndtcF1lwEpmw1rVF/SomscIGxdxEpkgr2oDX2Oz+RpmfvaRfRF1XtnOzMOESl5Zvd5KL5OXwjvFvAn7Z8jwAzg4gIkwNicFx1VMbpGCyoHwsoaXk0q5bzICxsRmNVTL2tyPn0WGQbLf+cwo7yfOWHLiMuQwH0vzXzD6YFwXkyRcV/uNHpIbj6Adw0kIKZd3Wdmskhff2mYBPqIdaF/IeCB9nAPFXJk6hUFbjlhcbzdYsmtk+YLKrgX88zmZabm7kGP4Ott1rmxsiPnFCXiJP+ag/KNdidRc3gYc5v9x5tk3a9Icy3Ul/pEJK6ddqbkDFL14ijELbC3PUz7OlbCp0sOQ1ekx5yJCmCgshQvnvs4vDQnzPCpXsGm1B+vNmkcdzGlO15Mvyg723j5WdaEASLPXAw5+qyxyS/L2RTcWbGXT2etmHJUv73XHlOS/5L1SF/pbwvoSEfm4qXD0jsitnitjCsHERI3Ay9Uw19x1zWcHb9UQBS9/1BRJtq6ylNKWDTgEx6KoBobo5Ka1rS4sC692XwPwi5vEqvp8+scWUS4qpzTqdXLZQ2StVUGhYwr5l9rMForodp0RRaE0w+pJKR5n16WLY3ZeSfvcUDJaUZq+u4qSWQerCQ7tqJ+itP6dgCx0Om1Fa3esrrLOd4ASrsdzmLU2p1fgAWNG0/2,iv:IDPTaozniUkinhXzkLfZSdH6kCLzGuhjV6sout4ipDM=,tag:enjd4Q74RqYWaa0u9u7GOA==,type:str]
+    config.production.json: ENC[AES256_GCM,data:Bh1yDsP6slsI7ckOnH5f1Qoq/JVF5hhGXJ9cciOsjabuVONg6GDT5mKLHSyXPIOPxD/LO5Ui/xObnx2YoHK0Bac+PUV8+W2eWSYwPlmmvVRwlCS6sfIbHO9BAxgqSlXGnqtx1qDEHEe4X2C9YPWNRihhBK/cYXKv9um+38wEvo1xX6sDQkvXLQPxGCNKdhilFn1DDzgqts9IUGWyIMd5uAiPrlAz7b3dS6RDGmNQwVJrw01YsPdY1EghnQnCEVa2yf49B0b+KeqJou2zdnIqTbIR7B6NT8gLdVAn5YbQ+svFtKDadID/21tPiY8x3ROzAe7EdY6SQsLAVbFKMFp3kacM8i2wHGfWNqqFAfDBd9Pn3/4sTDOBiy64z27AzcPfQyBlK8vEZLxkXaDvVYh4YWBIW67zPpiFjMzHRgKV6a/9e/8sfWknGSJ8W9/v87Wu90OsI+qzcEh6UEzK3Eim2DpDTiK7mTHVd0/MScX+PHy/cnvuIwkMu992Cn+KARxq7WTnip8BVd0wl4gBEpXD+hfPPKKYv+75BriZreGn8aTb72tIzevexxRUuVE3oXLvvCzKG7jIQGYFb4rE8m6khk4hlYXYi9ZMuDPmTd44UCRxFeclzY2XYF+dBXCGY7uEGSXH5WBFaAE7ctb1gmj7s4nVyOGPG3he1OBZKg4a17WML65zvDHjr4r1aaylqZAVY1Jid8+ShK9k3Ej4t8aUbTo/4HU734CX1APGyvdN95opnY64QVTdS6zbBFSUGzqaE9VdYqtqa9gW9c7afbv0MOJlSJZAYe5YexCIjJMLDbjtUCa/kKRqDyYsFkmXy2lrFxogsxh6nnfTaEsAHrWcAWr4aOc2eulE4WxUjZ2u6gotoG0LoCN/VYXUJcLo3E1XU4YYgIjvFUIPY9XHczwD008xQprgpChKu1wyhSyU+ARH4vQPpFFqvC4Ub97+bOZuCNUIhE3cXlB4u9SRnPpuBCjPtidZOURXdjc/HXiD70J9wuBLNqBZKe35GUVC0W+ThK5Uoo2Im0gkj1EACXGPsPhji5sGIfk3J8gNgM50xII=,iv:1oAmiVIyQOhDCHslqQlEBOrFOJzBMfxGSGbrDGZoKMw=,tag:LXD3NWUmjA3evDBg6PQlOg==,type:str]
 sops:
     age:
         - recipient: age1dknxwrzsnv2aq7lar4jznk89wrv7hfcjc0cmj9tf5kkcsqwptgeq3zw0lu
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBEc1NJVmpFZkRvSVdScU9U
-            VldqZ3RYM0ZvYmpVQUlpTUFyVlhaQzd5SkNnCko0MnRMQW9pbTUzTzR0ZEt0QitF
-            aVp6UkVIZVRIbXJRUGhyQUdZbVV6NFUKLS0tIHJjd3R3TmVncU9HK1djYzVOK2Rt
-            TGxCa3NPNWJDNk16OThXR1phbGY5UU0Kg12p7sE8bQCJbHjo0p6XLDYqZ1InQEK9
-            oP8eZVjYqtavsb0Dv68DU5Ls+0OZpDbMvOpCvtIyeQe3XPnufRILyQ==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB6SHlLajRTOE9TbnY2b2ZF
+            d0tabkxRZVgrSzFpcitRYmtSZFJmNmJNMFVzCnpNSTQzSG4vUUhvb3o0Z3NLcVpG
+            czdRRDhFT2hLQTFuYi9XTXp5ZURQVWcKLS0tIFR4dHY0R2tDR1B3aEZONXF1aFo3
+            RnBNUU5KdWM0NlFTbVRFeTJwWXBGaTgKmlqTbXttGFuBbJPs0Mdl8vF6ST3x/Y0W
+            lQGS2mVjBWZ838n0Z4g3+0FZbFWHu/7jCilGsU2UzgoY5izH96wBSQ==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2025-10-08T16:12:07Z"
-    mac: ENC[AES256_GCM,data:OggiM7vsCehg64+rNwagwbm8DY05DlpfGH/kc48A/Rvpokd3XbkplwRsshMBjcaDR2lhUtYq2yrQkm/6hwx+M2y5HfJmY2i6AegIlhostPVd51irCja2iZl7pglRsYwZiK+j4ELznKPAdHZXAE7L1vr+HNq59oSPtHpYbv4MXVQ=,iv:Q2jtGEfDrB4+8l+uDDxtgaXM2YiktgLDE66cOtl4Ozw=,tag:1YuUH+Vr5VANV6fp75G40w==,type:str]
+    lastmodified: "2025-10-09T15:46:57Z"
+    mac: ENC[AES256_GCM,data:BbBJudgE0ngnOYHCpCBRPLrdZihLCuspxnreFvPz2MBJ+tEsRQCqoEsJpQC0ncYVHzzNgjdJO4n63rfg7ZLTh5YW4lJxHMOLnvEydDAaWWaHIPhpXqeDctdEE07ikYemuBe4HoUIHsLCpcd3hho8xvfSBVHhWhue4PvyOI6vJfU=,iv:IRLRQiVVW7ibo3v6m/JDhVauTvSFhOf/F8tbrNnWFfc=,tag:0LZbvNv6JW61552lL4N48A==,type:str]
     encrypted_regex: ^(data|stringData)$
     version: 3.10.2
