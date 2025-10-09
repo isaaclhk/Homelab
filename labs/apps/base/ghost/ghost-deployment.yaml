@@ -25,9 +25,9 @@ spec:
       - name: ghost-content
         persistentVolumeClaim:
           claimName: ghost-pvc
-      - name: ghost-config-prod
+      - name: ghost-config
         secret:
-          secretName: ghost-config-prod
+          secretName: ghost-config
           defaultMode: 420
       - name: tmp
         emptyDir:
@@ -128,7 +128,7 @@ spec:
         - name: ghost-content
           mountPath: /home/nonroot/app/ghost/content
           readOnly: false
-        - name: ghost-config-prod
+        - name: ghost-config
           readOnly: true
           mountPath: /home/nonroot/app/ghost/config.production.json
           subPath: config.production.json
