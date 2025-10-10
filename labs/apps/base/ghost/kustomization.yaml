@@ -5,7 +5,6 @@ resources:
   - storage.yaml
   - mysql-config.yaml
   - mysql.yaml
-  - ghost-config.yaml
   - ghost-deployment.yaml
   - service.yaml
 
