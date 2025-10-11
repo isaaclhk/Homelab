@@ -4,4 +4,3 @@ namespace: audiobookshelf
 resources:
 - ../../base/audiobookshelf/
 - tunnel-token.yaml
-- tunnel.yaml

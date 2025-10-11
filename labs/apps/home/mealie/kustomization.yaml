@@ -4,4 +4,3 @@ namespace: mealie
 resources:
 - ../../base/mealie/
 - tunnel-token.yaml
-- tunnel.yaml

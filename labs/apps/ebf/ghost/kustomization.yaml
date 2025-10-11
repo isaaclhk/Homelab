@@ -4,7 +4,6 @@ namespace: ghost-ebf
 resources:
   - ../../base/ghost/
   - ghost-config.yaml
-  - tunnel.yaml
   - tunnel-token.yaml
 
 patches:
