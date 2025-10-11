@@ -76,19 +76,28 @@ If someone manually changes the cluster, Flux will reconcile it back to match th
 
 ### Repository Structure
 ```bash
-kube/
-├── clusters/
-│   └── prod/
-│       └── kustomization.yaml
-├── apps/
-│   ├── nginx/
-│   │   ├── deployment.yaml
-│   │   └── service.yaml
-│   └── redis/
-│       └── helmrelease.yaml
-└── infrastructure/
-    └── monitoring/
-        └── kustomization.yaml
+.
+├── apps
+│   ├── base
+│   │   ├── audiobookshelf
+│   │   ├── ghost
+│   │   ├── homarr
+│   │   ├── linkding
+│   │   └── mealie
+│   ├── ebf
+│   │   └── ghost
+│   └── home
+│       ├── audiobookshelf
+│       ├── homarr
+│       ├── linkding
+│       └── mealie
+├── clusters
+│   └── flux-system
+├── infrastructure
+│   └── renovate
+└── monitoring
+    ├── configs
+    └── controllers
 ```
 ## Exposing Apps to the Internet via Cloudflare
 
