@@ -2,7 +2,6 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: renovate-bot
-  namespace: renovate
 spec:
   schedule: '@daily'
   concurrencyPolicy: Forbid
