@@ -4,6 +4,8 @@ kind: Kustomization
 namespace: linkding-ebf
 resources:
   - ../../base/linkding
+  - tunnel-token.yaml
+  - tunnel.yaml
 
 patches:
   - path: namespace-patch.yaml
