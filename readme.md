@@ -153,50 +153,6 @@ It contains the same components as a CA-signed certificate (such as domain, publ
 > **Note**: For production systems or public-facing services, a CA-signed certificate (e.g., from Let’s Encrypt) is strongly recommended to establish trust and prevent browser security warnings.
 
 
-## Apps
-### [Linkding](https://github.com/sissbruecker/linkding)
-A simple, self-hosted bookmark manager. 
-#### Key Features
-- Save and organize bookmarks with tags  
-- Full-text search across saved bookmarks  
-- Minimal and fast web interface  
-- Import and export bookmarks (Netscape HTML format)  
-- REST API for integrations and automation  
-- Designed to be lightweight and easy to self-host (Docker support included) 
-
-### [Mealie](https://mealie.io/)
-
-Mealie is an open-source, self-hosted recipe manager and meal planner.  
-It lets you save recipes, plan meals, and generate shopping lists - all in one place.  
-
-#### Key Features
-- Import or create recipes  
-- Plan meals for the week  
-- Auto-generate grocery lists  
-- Multi-user and smart home integrations  
-
-### [Homarr](https://homarr.dev/docs/getting-started/installation/helm/)
-Homarr is a self-hosted dashboard that consolidates all your apps, services, and bookmarks into a single, customizable interface. With its clean design and ease of use, Homarr serves as a central hub for managing and monitoring your homelab or personal infrastructure.  
-
-#### Key Features
-- Customizable layout with Drag-and-drop widgets and apps
-- Real-time status indicators for quick health checks.  
-- One-click entry to apps, bookmarks, and services.  
-- Display useful information such as weather, system stats, and more.  
-
-### [Audiobookshelf](https://www.audiobookshelf.org/)
-Audiobookshelf is a self-hosted audiobook and podcast server with a modern web interface and apps for iOS/Android. It lets you host, stream, and manage your personal audiobook and podcast collections without relying on third-party services.
-
-**Key Features:**
-- Stream audiobooks and podcasts through a browser or mobile app
-- Supports MP3, M4B, and most common audio formats
-- Keeps track of listening progress across devices
-- Rich metadata management with cover art and descriptions
-- Multi-user support with separate libraries and progress
-- Offline downloads for mobile listening
-
-
-
 ## Monitoring
 ### [Prometheus-Grafana Monitoring Stack](https://github.com/prometheus-community/helm-charts/tree/main)
 
@@ -243,3 +199,10 @@ By integrating Renovate into your workflow, you gain:
 - Reproducibility – Builds are consistent and traceable across environments.
 - Transparency – Updates are surfaced as reviewable requests before merging.
 - Governance – Policies, schedules, and automerge rules ensure controlled updates
+
+## Other Apps
+- [Linkding](https://github.com/sissbruecker/linkding)
+- [Mealie](https://mealie.io/)
+- [Homarr](https://homarr.dev/docs/getting-started/installation/helm/)
+- [Audiobookshelf](https://www.audiobookshelf.org/)
+- [Ghost](https://ghost.org/)
