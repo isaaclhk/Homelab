@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: "2025-10-11T07:44:28Z"
+  labels:
+    kubernetes.io/metadata.name: linkding-ebf
+  name: linkding-ebf
+  resourceVersion: "393485"
+  uid: bcef76e2-439c-44fc-99c4-6a3a7991ec76
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active
