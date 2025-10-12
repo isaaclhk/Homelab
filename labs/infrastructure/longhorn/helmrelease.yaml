@@ -17,7 +17,6 @@ spec:
   values:
     persistence:
       defaultClass: false
+      defaultClassReplicaCount: 1
     defaultSettings:
       defaultReplicaCount: "1"
-    longhornStorageClass:
-      numberOfReplicas: "1"
