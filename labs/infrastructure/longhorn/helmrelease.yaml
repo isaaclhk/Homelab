@@ -18,4 +18,4 @@ spec:
     persistence:
       defaultClass: false
     defaultSettings:
-      defaultReplicaCount: 1
+      defaultReplicaCount: "1"
