@@ -7,7 +7,7 @@ spec:
   interval: 10m0s
   retryInterval: 1m
   timeout: 5m
-  path: ./labs/infrastructure/renovate
+  path: ./labs/infrastructure
   prune: true
   sourceRef:
     kind: GitRepository
