@@ -21,6 +21,6 @@ spec:
     persistence:
       homarrDatabase:
         enabled: true
-        storageClassName: local-path
+        storageClassName: longhorn
         mountPath: /app/data
         size: 500Mi

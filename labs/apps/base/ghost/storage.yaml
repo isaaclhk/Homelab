@@ -3,23 +3,23 @@ kind: PersistentVolumeClaim
 metadata:
   name: ghost-pvc
 spec:
-  storageClassName: local-path
+  storageClassName: longhorn
   volumeMode: Filesystem
   accessModes:
   - ReadWriteOnce
   resources:
     requests:
-      storage: 1Gi
+      storage: 5Gi
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: mysql-pvc
 spec:
-  storageClassName: local-path
+  storageClassName: longhorn
   volumeMode: Filesystem
   accessModes:
   - ReadWriteOnce
   resources:
     requests:
-      storage: 1Gi
+      storage: 3Gi

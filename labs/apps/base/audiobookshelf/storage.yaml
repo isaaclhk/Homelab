@@ -9,13 +9,12 @@ spec:
   resources:
     requests:
       storage: 50Mi
-  storageClassName: local-path
+  storageClassName: longhorn
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: metadata-pvc
-  namespace: audiobookshelf
 spec:
   accessModes:
     - ReadWriteOnce
@@ -23,13 +22,12 @@ spec:
   resources:
     requests:
       storage: 1Gi
-  storageClassName: local-path
+  storageClassName: longhorn
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: audiobooks-pvc
-  namespace: audiobookshelf
 spec:
   accessModes:
     - ReadWriteOnce
@@ -37,13 +35,12 @@ spec:
   resources:
     requests:
       storage: 5Gi
-  storageClassName: local-path
+  storageClassName: longhorn
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: books-pvc
-  namespace: audiobookshelf
 spec:
   accessModes:
     - ReadWriteOnce
@@ -51,13 +48,12 @@ spec:
   resources:
     requests:
       storage: 5Gi
-  storageClassName: local-path
+  storageClassName: longhorn
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: podcasts-pvc
-  namespace: audiobookshelf
 spec:
   accessModes:
     - ReadWriteOnce
@@ -65,4 +61,4 @@ spec:
   resources:
     requests:
       storage: 5Gi
-  storageClassName: local-path
+  storageClassName: longhorn

@@ -16,7 +16,7 @@ spec:
       interval: 24h
   values:
     persistence:
-      defaultClass: false
+      defaultClass: true
       defaultClassReplicaCount: "1"
     defaultSettings:
       defaultReplicaCount: "1"
