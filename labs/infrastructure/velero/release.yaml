@@ -13,6 +13,11 @@ spec:
         name: vmware-tanzu
       interval: 24h
   values:
+    kubectl:
+      image:
+        repository: registry.k8s.io/kubectl
+        tag: v1.31.0
+
     initContainers:
       - name: velero-plugin-for-aws
         image: velero/velero-plugin-for-aws:v1.11.0
