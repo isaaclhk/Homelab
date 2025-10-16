@@ -20,7 +20,7 @@ spec:
         fsGroup: 911
         runAsNonRoot: true
       containers:
-        - image: ghcr.io/mealie-recipes/mealie:v3.3.1
+        - image: ghcr.io/mealie-recipes/mealie:v3.3.2
           name: mealie
           ports:
             - containerPort: 9000
