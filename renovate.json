@@ -10,5 +10,17 @@
     "managerFilePatterns": [
       "/\\.yaml$/"
     ]
-  }
+  },
+  "platformAutomerge": true,
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch", "pin", "pinDigest"],
+      "automerge": true,
+      "automergeType": "pr"
+    },
+    {
+      "matchUpdateTypes": ["major"],
+      "automerge": false
+    }
+  ]
 }
