@@ -41,9 +41,9 @@ spec:
     schedules:
       daily-cluster-backup:
         disabled: false
-        schedule: "0 2 * * *"
+        schedule: "0 2 * * 1"
         template:
-          ttl: "24h"
+          ttl: "168h"
           includedNamespaces:
             - "*"
           defaultVolumesToFsBackup: true
