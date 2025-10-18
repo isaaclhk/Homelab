@@ -245,16 +245,10 @@ velero backup create manual-backup-$(date +%Y%m%d-%H%M%S) --default-volumes-to-f
 velero restore create --from-backup <backup-name>
 ```
 
-> **Important - Recovery Timing**: With a 7-day TTL and weekly schedule, only 1 backup exists at any time. This means:
-> - **Between backup runs**: You may have 0 backups visible (normal behavior)
-> - **After a crash lasting 6+ days**: The backup may be deleted immediately when Velero starts due to TTL expiration
->
-> **If restoring after a multi-day outage**:
+> **Important**: If restoring after a multi-day outage
 > 1. Scale down Velero **before** it reconciles: `kubectl scale deployment velero -n velero --replicas=0`
 > 2. Restore your data: `velero restore create --from-backup <backup-name>`
 > 3. Scale Velero back up: `kubectl scale deployment velero -n velero --replicas=1`
->
-> **To avoid this issue entirely**: Consider increasing TTL to 14+ days for a safety buffer.
 
 ### Automatic Image Updates via [Renovate](https://docs.renovatebot.com/examples/self-hosting/)
 
