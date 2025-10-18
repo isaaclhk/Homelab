@@ -76,7 +76,7 @@ If someone manually changes the cluster, Flux will reconcile it back to match th
 
 ### Repository Structure
 ```bash
-.
+labs
 ├── apps
 │   ├── base
 │   │   ├── audiobookshelf
@@ -89,12 +89,14 @@ If someone manually changes the cluster, Flux will reconcile it back to match th
 │   └── home
 │       ├── audiobookshelf
 │       ├── homarr
-│       ├── linkding
+│       ├── linkding
 │       └── mealie
 ├── clusters
 │   └── flux-system
 ├── infrastructure
-│   └── renovate
+│   ├── renovate
+│   ├── longhorn
+│   └── velero
 └── monitoring
     ├── configs
     └── controllers
@@ -200,14 +202,68 @@ After saving, you can access Grafana in your browser at:
 http://grafana.mydomain.com
 ```
 ## Infrastructure
+
+### Distributed Block Storage via [Longhorn](https://longhorn.io/)
+
+Longhorn is a cloud-native distributed block storage system for Kubernetes. It provides persistent volumes for stateful applications with built-in replication, snapshots, and backups.
+
+In this lab, Longhorn is configured as the default StorageClass with a single replica (optimized for single-node homelab setups). All application PersistentVolumeClaims automatically use Longhorn for storage provisioning.
+
+Key features:
+- **Default StorageClass** - Automatic volume provisioning for new PVCs
+- **Web UI** - Visual management of volumes, nodes, and backups
+- **Snapshot Support** - Point-in-time volume snapshots for data protection
+
+To access the Longhorn UI:
+```bash
+kubectl port-forward -n longhorn-system svc/longhorn-frontend 8080:80
+# Open http://localhost:8080
+```
+
+### Disaster Recovery via [Velero](https://velero.io/)
+
+Velero is a backup and disaster recovery tool for Kubernetes clusters. It backs up cluster resources and persistent volumes to object storage (S3-compatible), enabling full cluster restoration in case of data loss or cluster failure.
+
+In this lab, Velero runs weekly backups to an S3 bucket with a 7-day retention policy (keeping only 1 backup at a time for cost optimization).
+
+Configuration highlights:
+- **Backup Schedule** – Weekly on Mondays at 2:00 AM
+- **Retention** – 7 days (168 hours)
+- **Storage Backend** – AWS S3-compatible bucket 
+- **Backup Scope** – All namespaces and persistent volumes
+- **Recovery Window** – Single backup retained for hardware failure scenarios
+
+Common operations:
+```bash
+# List all backups
+velero backup get
+
+# Manually create a backup
+velero backup create manual-backup-$(date +%Y%m%d-%H%M%S) --default-volumes-to-fs-backup --wait
+
+# Restore from backup
+velero restore create --from-backup <backup-name>
+```
+
+> **Important - Recovery Timing**: With a 7-day TTL and weekly schedule, only 1 backup exists at any time. This means:
+> - **Between backup runs**: You may have 0 backups visible (normal behavior)
+> - **After a crash lasting 6+ days**: The backup may be deleted immediately when Velero starts due to TTL expiration
+>
+> **If restoring after a multi-day outage**:
+> 1. Scale down Velero **before** it reconciles: `kubectl scale deployment velero -n velero --replicas=0`
+> 2. Restore your data: `velero restore create --from-backup <backup-name>`
+> 3. Scale Velero back up: `kubectl scale deployment velero -n velero --replicas=1`
+>
+> **To avoid this issue entirely**: Consider increasing TTL to 14+ days for a safety buffer.
+
 ### Automatic Image Updates via [Renovate](https://docs.renovatebot.com/examples/self-hosting/)
 
 Renovate is an automation tool designed to manage and update dependencies, including Docker images, Helm charts, and Kubernetes manifests. Rather than relying on the non-deterministic :latest tag, Renovate continuously monitors registries for new versions and generates merge or pull requests with proposed updates.
 
 By integrating Renovate into your workflow, you gain:
-- Reproducibility – Builds are consistent and traceable across environments.
-- Transparency – Updates are surfaced as reviewable requests before merging.
-- Governance – Policies, schedules, and automerge rules ensure controlled updates
+- **Reproducibility** – Builds are consistent and traceable across environments
+- **Transparency** – Updates are surfaced as reviewable requests before merging
+- **Governance** – Policies, schedules, and automerge rules ensure controlled updates
 
 ## Other Apps
 - [Linkding](https://github.com/sissbruecker/linkding)
