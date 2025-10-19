@@ -98,7 +98,9 @@ labs
 │   │   ├── linkding
 │   │   └── mealie
 │   ├── ebf
-│   │   └── ghost
+│   │   ├── ghost
+│   │   ├── linkding
+│   │   └── audiobookshelf
 │   └── home
 │       ├── audiobookshelf
 │       ├── homarr
