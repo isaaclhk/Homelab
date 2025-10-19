@@ -1,5 +1,18 @@
 # Isaac's Home Lab
 
+## Introduction
+
+This repository contains a Kubernetes homelab environment that hosts applications for my church community and personal use. The infrastructure is managed using GitOps with Flux CD, automating deployment, backup, and configuration management.
+
+The setup uses Longhorn for persistent storage, Velero for weekly backups to S3, and Cloudflare Tunnels for secure external access. All secrets are encrypted with SOPS, and cluster state is reconciled automatically from the Git repository.
+
+Key features:
+- GitOps workflow with Flux CD
+- Automated disaster recovery with weekly S3 backups
+- Secure external access via Cloudflare Tunnels
+- Prometheus and Grafana for monitoring
+- Automated dependency updates with Renovate
+
 ## Prerequisites
 - kubectl
 - [helm](https://helm.sh/docs/)
@@ -265,3 +278,7 @@ By integrating Renovate into your workflow, you gain:
 - [Homarr](https://homarr.dev/docs/getting-started/installation/helm/)
 - [Audiobookshelf](https://www.audiobookshelf.org/)
 - [Ghost](https://ghost.org/)
+
+## License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
