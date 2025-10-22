@@ -63,7 +63,7 @@ spec:
           runAsNonRoot: true
           runAsUser: 65534
 
-        image: docker.io/mysql:9.4
+        image: docker.io/mysql:9.5
         imagePullPolicy: Always
         envFrom:
         - secretRef:
