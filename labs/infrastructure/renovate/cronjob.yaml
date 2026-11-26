@@ -10,7 +10,7 @@ spec:
       template:
         spec:
           containers:
-            - image: renovate/renovate:41.151.0
+            - image: renovate/renovate:41.173.1
               name: renovate-bot
               envFrom:
                 - secretRef:
